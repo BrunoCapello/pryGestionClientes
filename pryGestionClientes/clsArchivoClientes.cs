@@ -107,12 +107,16 @@ namespace pryGestionClientes
         }
 
         public void Listar(DataGridView dgv)
-        {
-            string datosLeidos = "";
+        { 
+            if (!File.Exists(nombreArchivo))
+            {
+                MessageBox.Show("No hay datos cargados");
+                return;
+            }
+            
             string[] vectorDatos = new string[4];
-
             StreamReader leerDatos = new StreamReader(nombreArchivo);
-            datosLeidos = leerDatos.ReadLine();
+            string datosLeidos = leerDatos.ReadLine();
 
             dgv.Rows.Clear();
 
@@ -132,6 +136,12 @@ namespace pryGestionClientes
         public int CantidadClientes()
         {
             int result = -1;
+
+            if (!File.Exists(nombreArchivo))
+            {
+                return 0;
+            }
+            
             string datosLeidos = "";
             StreamReader leerDatos = new StreamReader(nombreArchivo);
 
@@ -150,12 +160,16 @@ namespace pryGestionClientes
         public Decimal TotalDeuda()
         {
             Decimal result = 0;
-            string datosLeidos = "";
+
+            if (!File.Exists(nombreArchivo))
+            {
+                return 0;
+            }
 
             StreamReader leerDatos = new StreamReader(nombreArchivo);
 
             string[] vectorDatos = new string[4];
-            datosLeidos = leerDatos.ReadLine();
+            string datosLeidos = leerDatos.ReadLine();
 
             while (datosLeidos != null)
             {
@@ -174,13 +188,17 @@ namespace pryGestionClientes
         {
             decimal result = 0;
             decimal resultado = 0;
-            string datosLeidos = "";
             Int32 cantidadClientes = 0;
+
+            if (!File.Exists(nombreArchivo))
+            {
+                return 0;
+            }
 
             StreamReader leerDatos = new StreamReader(nombreArchivo);
 
             string[] vectorDatos = new string[4];
-            datosLeidos = leerDatos.ReadLine();
+            string datosLeidos = leerDatos.ReadLine();
 
             while (datosLeidos != null)
             {

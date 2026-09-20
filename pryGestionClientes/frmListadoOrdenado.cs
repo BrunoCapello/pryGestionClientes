@@ -17,5 +17,9 @@ namespace pryGestionClientes
             InitializeComponent();
         }
 
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
