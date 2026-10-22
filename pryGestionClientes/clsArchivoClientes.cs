@@ -296,7 +296,6 @@ namespace pryGestionClientes
                 if (Convert.ToDecimal(vectorDatos[2]) > 0)
                 {
                     cantidadClientes++;
-
                     total += Convert.ToDecimal(vectorDatos[2]);
                 }
 
@@ -430,7 +429,7 @@ namespace pryGestionClientes
             {
                 for(int j = 0; j < indice - 1; j++)
                 {
-                    if (string.Compare(clientes[j].usuario, clientes[j + 1].usuario) < 0)
+                    if (string.Compare(clientes[j].usuario, clientes[j + 1].usuario) > 0)
                     {
                         aux = clientes[j];
                         clientes[j] = clientes[j + 1];
@@ -455,7 +454,7 @@ namespace pryGestionClientes
             {
                 for (int j = 0; j < indice - 1; j++)
                 {
-                    if (string.Compare(clientes[j].usuario, clientes[j + 1].usuario) > 0)
+                    if (string.Compare(clientes[j].usuario, clientes[j + 1].usuario) < 0)
                     {
                         aux = clientes[j];
                         clientes[j] = clientes[j + 1];

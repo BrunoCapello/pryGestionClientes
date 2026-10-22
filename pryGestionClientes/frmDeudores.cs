@@ -29,7 +29,7 @@ namespace pryGestionClientes
             objArchivoClientes.ListarDeudores(dgvListadoClientes);
             lblMuestraTotal.Text = objArchivoClientes.TotalDeuda().ToString();
             lblMuestraQ.Text = objArchivoClientes.CantidadDeudores().ToString();
-            lblMuestraPromedio.Text = objArchivoClientes.PromedioDeuda().ToString();
+            lblMuestraPromedio.Text = objArchivoClientes.PromedioDeudores().ToString();
         }
     }
 }

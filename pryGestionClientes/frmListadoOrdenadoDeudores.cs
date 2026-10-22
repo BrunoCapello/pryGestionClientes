@@ -40,7 +40,7 @@ namespace pryGestionClientes
                     }
                     break;
                 case 1:
-                    if (cboOrdenar.SelectedIndex == 1)
+                    if (cboOrdenar.SelectedIndex == 0)
                     {
                         objArchivoClientes.OrdenarPorNombreAscendente(dgvListadoClientes);
                     }
@@ -50,7 +50,7 @@ namespace pryGestionClientes
                     }
                     break;
                 case 2:
-                    if (cboOrdenar.SelectedIndex == 2)
+                    if (cboOrdenar.SelectedIndex == 0)
                     {
                         objArchivoClientes.OrdenarPorDeudaAscendente(dgvListadoClientes);
                     }
@@ -60,7 +60,7 @@ namespace pryGestionClientes
                     }
                     break;
                 case 3:
-                    if (cboOrdenar.SelectedIndex == 3)
+                    if (cboOrdenar.SelectedIndex == 0)
                     {
                         objArchivoClientes.OrdenarPorLimiteAscendente(dgvListadoClientes);
                     }
